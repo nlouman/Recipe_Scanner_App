@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/textusername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -26,31 +26,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:text="@string/title_activity_login"
+            android:text="@string/app_name"
             android:textAlignment="center"
             android:textSize="36sp"
             android:translationY="50pt" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/login"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="match_parent"
             android:layout_height="76dp"
+            android:onClick="loginClicked"
             android:text="Login"
             android:textSize="18sp"
             android:translationY="160pt" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/signup"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="match_parent"
             android:layout_height="76dp"
+            android:onClick="signupClicked"
             android:text="Sign Up"
             android:textSize="18sp"
             android:translationY="90pt" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/textpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"

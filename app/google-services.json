@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "600455175925",
+    "firebase_url": "https://recipe-scanner-app.firebaseio.com",
+    "project_id": "recipe-scanner-app",
+    "storage_bucket": "recipe-scanner-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600455175925:android:3d4c6ed5d31a94fa66afbc",
+        "android_client_info": {
+          "package_name": "com.example.recipe_scanner_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "600455175925-h8rcc3d2jdk130pas9t8i2r80mvqgm86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOSXE_51dxp6zCAd5rtZs0pr_pvyIZWv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "600455175925-h8rcc3d2jdk130pas9t8i2r80mvqgm86.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
