@@ -42,17 +42,17 @@ public class LoginActivity extends AppCompatActivity {
     public void signupClicked(View view){
         String email = emailtext.getText().toString();
         String password= passwordtext.getText().toString();
-        mAuth.signInWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+        mAuth.createUserWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
-                Intent intent= new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);}
+                Toast.makeText(LoginActivity.this, "User created", Toast.LENGTH_LONG).show();
+            }
         }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(LoginActivity.this, e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
-                    }
-                });
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(LoginActivity.this, e.getLocalizedMessage().toString(), Toast.LENGTH_LONG).show();
+                }
+            });
     }
 
 
