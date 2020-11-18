@@ -1,6 +1,5 @@
-package com.example.recipe_scanner_app;
+package com.example.recipe_scanner_app.Main;
 
-import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,15 +10,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.recipe_scanner_app.R;
+
 import java.util.ArrayList;
 
 public class MenuRecyclerAdapter extends RecyclerView.Adapter<MenuRecyclerAdapter.MenuItemHolder> {
-    private ArrayList<Bitmap> recipePreview;
-    private ArrayList<String> recipeName;
+    private ArrayList<Recipe> recipesList;
 
-    public MenuRecyclerAdapter(ArrayList<Bitmap> recipePreviews, ArrayList<String> recipeNames) {
-        this.recipePreview = recipePreviews;
-        this.recipeName = recipeNames;
+    public MenuRecyclerAdapter(ArrayList<Recipe> recipes) {
+        this.recipesList = recipes;
     }
     @NonNull
 
@@ -33,9 +32,9 @@ public class MenuRecyclerAdapter extends RecyclerView.Adapter<MenuRecyclerAdapte
     @Override
     public void onBindViewHolder(@NonNull MenuItemHolder holder, int position) {
 
-        // We set the texts and the image of our MenuItemHolder object
-        holder.previewView.setImageBitmap(recipePreview.get(position));
-        holder.nameView.setText(recipeName.get(position));
+        // Set the texts and the image of the MenuItemHolder object
+        holder.previewView.setImageBitmap(recipesList.get(position).recipePreview);
+        holder.nameView.setText(recipesList.get(position).recipeName);
         holder.linearLayout.setBackgroundResource(R.drawable.ic_launcher_background);
 
 
@@ -43,7 +42,7 @@ public class MenuRecyclerAdapter extends RecyclerView.Adapter<MenuRecyclerAdapte
 
     @Override
     public int getItemCount() {
-        return recipeName.size();
+        return recipesList.size();
     }
 
     class MenuItemHolder extends RecyclerView.ViewHolder {

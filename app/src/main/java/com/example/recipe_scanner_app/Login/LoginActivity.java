@@ -1,4 +1,4 @@
-package com.example.recipe_scanner_app;
+package com.example.recipe_scanner_app.Login;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.recipe_scanner_app.Main.MainActivity;
+import com.example.recipe_scanner_app.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;

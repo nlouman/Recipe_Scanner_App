@@ -1,4 +1,4 @@
-package com.example.recipe_scanner_app;
+package com.example.recipe_scanner_app.Displayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.graphics.pdf.PdfDocument;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
+
+import com.example.recipe_scanner_app.R;
 
 import java.io.File;
 import java.io.FileOutputStream;

@@ -9,19 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Recipe_Scanner_App">
-        <activity android:name=".EditRecipeActivity"></activity>
-        <activity android:name=".ScanRecipeActivity" />
+        <activity android:name=".Scanner.EditRecipeActivity"></activity>
+        <activity android:name=".Scanner.ScanRecipeActivity" />
         <activity android:name=".ShareRecipeActivity" />
-        <activity android:name=".DisplayRecipeActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".Displayer.DisplayRecipeActivity" />
+        <activity android:name=".Settings.SettingsActivity" />
+        <activity android:name=".Login.LoginActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".Main.MainActivity"/>
 
 
     </application>
