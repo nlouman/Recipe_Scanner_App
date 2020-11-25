@@ -3,6 +3,8 @@ package com.example.recipe_scanner_app.Main;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
@@ -11,7 +13,9 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
@@ -199,6 +203,34 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             System.out.println("catch");
             e.printStackTrace();
+        }
+    }
+
+    // Permissions for camera
+    private boolean hasCameraPermission() {
+        return ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.CAMERA
+        ) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    // Permissions for camera
+    private void requestPermission() {
+        ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.CAMERA}, 1);
+    }
+
+    // Open camera
+    private void enableCamera() {
+        Intent intent = new Intent(this, ScanRecipeActivity.class);
+        startActivity(intent);
+    }
+
+    // OnClickListener for Camera/ScanRecipe button
+    public void openCamera(View view) {
+        if (hasCameraPermission()) {
+            enableCamera();
+        } else {
+            requestPermission();
         }
     }
 }
